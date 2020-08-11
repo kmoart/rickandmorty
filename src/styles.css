@@ -1,0 +1,160 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: #FFFFFF;;
+    font-family: Arial;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+header{
+   
+    width: 1340px;
+    height: 560px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+    box-shadow: 0px 1px 0px #E7E8F2;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.main{
+
+    
+    width: 1340px;
+    height: 1465px;
+    left: 0px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+nav{
+    width: 500px;
+    height: 100px;
+    padding-left: 50px;
+
+}
+
+.filtrobox{
+    width: 314px;
+    height: 17px;    
+    padding-top: 20px;
+}
+
+.titulofiltro{     
+    font-family: 'Play', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    /* negro */    
+    color: #404040;
+}
+
+.imgtitulo{
+    width: 100px;
+    height: 17px;
+    padding-left: 250px;
+}
+
+.tarjeta{
+
+width: 600px;
+height: 300px;
+background: #F6F6F6;
+border-radius: 10px;
+box-shadow: 0 5px 10px rgba(0,0,0,.5)
+}
+
+.imagen{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.tituloPersonaje{
+    font-family: 'Play', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+}
+
+.descripcion{    
+    padding-top: 20px;
+    padding-left: 15px;  
+
+}
+
+.linea{
+    width: 258px;
+    height: 2px;
+    background-color: #C84E89;
+}
+
+.atributo1{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+}
+
+.atributo2{
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+color: #807E7E;
+padding-left: 15px;
+
+}
+
+.boton{
+
+    width: 148px;
+    height: 39px;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* gradeinte */
+
+    background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+
+    /* blanco */
+
+    color: #FFFFFF;
+}
+
+.boxbutton{
+    padding-left: 15px;
+    padding-top: 100px;
+}
