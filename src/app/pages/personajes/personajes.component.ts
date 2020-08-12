@@ -11,14 +11,19 @@ export class PersonajesComponent implements OnInit {
 
   personajes: PersonajeModel[] = [];
 
+  cargando = false ;
+
   constructor( private personajesService: PersonajesService ) { }
 
   ngOnInit(): void {
+
+    this.cargando = true;
 
     this.personajesService.obtenerPersonajes()
     .subscribe( resp => {
      
       this.personajes = resp[1];
+      this.cargando = false;
     });
   }
 

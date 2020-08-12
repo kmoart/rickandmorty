@@ -28,11 +28,52 @@ header{
     box-shadow: 0px 1px 0px #E7E8F2;
 
     display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    align-content: flex-start;
+
+}
+
+.box2{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-content: center;
+    align-content: flex-start;
 
+}
+
+@font-face {
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    src: url('../src/assets/fonts/get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8.ttf');
+  }
+
+.titulorickandmorty{
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    color: #FFF9FE;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.opcrickandmorty{
+    font-family: get_schwifty__a_rick_and_morty_font_by_jonizaak-dajw4u8;
+    color: #FFF9FE;
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 110px;
+    padding-top: -10px;
+    text-decoration: underline;
+}
+
+.opcrickandmorty a:hover{   
+        text-decoration: underline;
+}
+
+
+.box3{
+    padding-left: 67%;
 }
 
 .main{
@@ -114,6 +155,12 @@ box-shadow: 0 5px 10px rgba(0,0,0,.5)
     background-color: #C84E89;
 }
 
+.linea2{
+    width: 258px;
+    height: 2px;
+    background-color: #C84E89;
+}
+
 .atributo1{
     font-family: Roboto;
     font-style: normal;
@@ -157,4 +204,86 @@ padding-left: 15px;
 .boxbutton{
     padding-left: 15px;
     padding-top: 100px;
+}
+
+footer{
+    display: none;
+   
+}
+
+@media screen and (max-width: 800px){
+
+    header{
+        width: 90%;
+        height: 68px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }    
+    
+
+    .box2{
+        display: none;
+    }
+
+    .box3{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .titulofiltro{
+        font-size: 20px;
+        padding-left: 25px;
+    }
+
+    .linea{
+        width: 400px;
+        height: 0.1px;
+        padding-left: -25px;
+        
+    }
+   
+	.main{
+        width: 75%;
+        padding-left: 6%;
+    }
+    .imagen{
+        width: 83%;
+    }
+
+    .linea2{
+        width: 190px;
+        height: 0.1px;
+        background-color: #C84E89;
+    }
+
+    .tarjeta{
+        height: 205px;
+    }
+
+    .boxbutton{
+        padding-top: 5px;
+        padding-left: 0px;
+    }
+
+    .boton{
+        background: none;
+        color: #F15F79; 
+    }
+    .descripcion{
+        padding-left: 0px;
+    }
+
+    footer{        
+        background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+    }
+
 }

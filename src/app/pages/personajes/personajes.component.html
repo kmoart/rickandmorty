@@ -1,15 +1,23 @@
 <header>
-    <div class="box">
-        <img src="./assets/img/Rick y Morty.svg" alt="">
+    <div class="box1">
+        <label class="titulorickandmorty">Rick and Morty</label>
     </div>
-    <div class="box">
-        <img src="./assets/img/Portal.svg" alt="">
+    <div class="box2">
+        <img src="./assets/images/Rick y Morty.svg" alt="">
+    
+    
+        <img src="./assets/images/Portal.svg" alt="">
+    
+        
+        <img src="./assets/images/Meezeek 2.svg" alt="">
+            
+        
+    
+        <img src="./assets/images/Meezeek 1.svg" alt="">
     </div>
-    <div class="box">
-        <img src="./assets/img/Meezeek 2.svg" alt="">
-    </div>
-    <div class="box">
-        <img src="./assets/img/Meezeek 1.svg" alt="">
+    <div class="box3">
+        <a href="#" class="opcrickandmorty" >PERSONAJES</a>
+        <a href="#" class="opcrickandmorty">EPISODIOS</a>
     </div>
 </header>
 <nav>
@@ -19,7 +27,7 @@
         </div>
         <div class="imgtitulo">
             <a href="#">
-                <img src="./assets/img/filtro.svg" alt="">
+                <img src="./assets/images/filtro.svg" alt="">
             </a>
         </div>
     </div>
@@ -27,8 +35,8 @@
         <hr class="linea">
     </div>   
 </nav>
-<section class="main">  
-    <div *ngFor= "let personaje of personajes; let i = index " class="tarjeta mb-5">
+<section *ngIf= "!cargando && personajes.length > 0" class="main">  
+    <div *ngFor= "let personaje of personajes; let i = index " class="tarjeta mb-5 animated fadeIn slowest">
         <div class="row">
             <div class="col-6">
                 <div>
@@ -38,7 +46,7 @@
             <div class="col-6">
                 <div class="descripcion">
                     <h3 class="tituloPersonaje">{{personaje.name}}</h3>
-                    <hr class="linea">
+                    <hr class="linea2">
                     <p class="atributo1">{{personaje.origin.name}}</p>
                     <div class="row">
                         <label class="atributo2">Especie:</label>
@@ -51,11 +59,18 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    <footer>
+        <img src="./assets/images/rick.svg" alt="">
+        
+        
+        <img src="./assets/images/Morty.svg" alt="">
+    </footer>  
 </section>
-<footer></footer>
 
-<div class="alert alert-warning text-center mt-3">
+
+<div *ngIf="!cargando && personajes.length === 0" 
+    class="alert alert-warning text-center mt-3 animated fadeIn slow">
     <h4 class="alert-heading">No hay registros</h4>
     <p>
         <i class="fa fa-exclamation fa-2x"></i>
@@ -63,7 +78,8 @@
 </div>
 
 
-<div class="alert alert-info text-center mt-3">
+<div *ngIf="cargando"    
+    class="alert alert-info text-center mt-3 animated fadeIn slow">
     <h4 class="alert-heading">Cargando</h4>
     <p>
         <i class="fa fa-refresh fa-spin fa-2x"></i>

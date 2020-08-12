@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PersonajeModel } from '../models/personaje.model';
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,8 @@ export class PersonajesService {
   obtenerPersonajes(){
     return this.http.get(`${ this.url }/character`)
     .pipe(
-      map( resp => this.crearArreglo( resp ))
+      map( resp => this.crearArreglo( resp )),
+      delay(1500)
     );
   }
 
