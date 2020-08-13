@@ -4,26 +4,31 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    -ms-box-sizing:border-box ;
+	-o-box-sizing:border-box ;
+	-box-sizing:border-box ;
 }
 
 body{
     background: #FFFFFF;;
-    font-family: Arial;
+    font-family: Arial;    
+}
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
+.contenedor{
+	
+	width: 100%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;/*Se coloca ésta propiedad para que el header pueda cumplir el width de 100%
+	y no ubicarse con los demás elementos en forma de fila como lo pide la propiedad anterior, de flex-direction*/
 }
 
 header{
    
-    width: 1340px;
-    height: 560px;
-    left: 0px;
-    top: 0px;
-
+    width: 100%;
+    height: 560px;    
+    
     background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
     box-shadow: 0px 1px 0px #E7E8F2;
 
@@ -214,13 +219,20 @@ footer{
 @media screen and (max-width: 800px){
 
     header{
-        width: 90%;
+        width: 100%;
         height: 68px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: center;
+        overflow: hidden;
+        /*aqui esta el cambio*/
+        position: fixed;       
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /*fin del cambio*/
     }    
     
 
@@ -237,6 +249,7 @@ footer{
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        margin-top: 80px;
     }
 
     .titulofiltro{
@@ -282,8 +295,31 @@ footer{
         padding-left: 0px;
     }
 
-    footer{        
+    footer{    
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;     
+        overflow: hidden;
+        /*aqui esta el cambio*/
+        position: fixed;       
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        /*fin del cambio*/
         background: linear-gradient(90deg, #C84E89 0%, #F15F79 100%);
+        border-radius: 5px;
+    }
+
+    .box4{
+        padding-left: 15%;
+    }
+
+    .opcrickandmorty{
+        padding-right: 75px;
     }
 
 }

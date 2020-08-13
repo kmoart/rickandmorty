@@ -117,13 +117,8 @@
               "devServerTarget": "rickandmortyApp:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {}
         }
       }
-    }
-  },
+    }},
   "defaultProject": "rickandmortyApp"
 }
